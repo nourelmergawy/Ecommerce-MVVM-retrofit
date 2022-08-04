@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+
 import com.mrg.ecommercemvvmretrofit.Adapter.RecyclerAdapter;
 import com.mrg.ecommercemvvmretrofit.EViewModel;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
@@ -24,7 +26,7 @@ public class ProductFragment extends Fragment {
     private FragmentProductBinding binding;
     private RecyclerAdapter adapter;
     private EViewModel viewModel;
-
+    private ProgressBar progressBar;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,9 +40,10 @@ public class ProductFragment extends Fragment {
         // Inflate the layout for this fragment
         fragment =new ProductFragment();
         binding= FragmentProductBinding.inflate(getLayoutInflater());
+        progressBar= binding.progressBar2;
         viewModel = new ViewModelProvider(requireActivity()).get(EViewModel.class);
         viewModel.init();
-        viewModel.getProduct(getActivity().getApplicationContext());
+        viewModel.getProduct(getActivity().getApplicationContext(),progressBar);
         setRecycleView();
         viewModel.mutableLiveData.observe(getViewLifecycleOwner(), new Observer<List<Product>>() {
             @Override

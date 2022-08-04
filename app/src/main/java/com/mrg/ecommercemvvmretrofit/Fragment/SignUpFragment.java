@@ -24,7 +24,6 @@ public class SignUpFragment extends Fragment {
     private EditText etusername ;
     private Button signUpBtn ;
     private EViewModel viewModel;
-    private ImageButton profileImg ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +43,7 @@ public class SignUpFragment extends Fragment {
                 String email = etEmail.getText().toString();
                 String password = etpassword.getText().toString();
                 String username = etusername.getText().toString();
-                viewModel.createUser(new User(email,username,password,imgURI),getActivity(),getActivity().getApplicationContext());
+                viewModel.createUser(new User(email,username,password,imgURI),getActivity(),getActivity().getApplicationContext(),view);
             }
         }) ;
         return binding.getRoot();

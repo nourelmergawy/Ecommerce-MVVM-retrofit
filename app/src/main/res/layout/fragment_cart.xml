@@ -26,13 +26,13 @@
             android:text="price"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView12"
+            app:layout_constraintEnd_toStartOf="@+id/price"
             app:layout_constraintHorizontal_bias="0.785"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tittle" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/subtotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -131,7 +131,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:padding="8dp"
-        android:text="delivery"
+        android:text="total"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/total"
@@ -162,7 +162,7 @@
         android:text="subtotal"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/subtotal"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

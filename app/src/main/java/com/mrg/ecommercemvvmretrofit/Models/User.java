@@ -9,9 +9,27 @@ public class User implements Serializable {
     String role;
     String avatar;
     int id;
+    String access_token;
+
+    public String getAccess_token() {
+        return access_token;
+    }
+
+    public void setAccess_token(String access_token) {
+        this.access_token = access_token;
+    }
+
+    public User(String access_token) {
+        this.access_token = access_token;
+    }
 
     public String getEmail() {
         return email;
+    }
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public void setEmail(String email) {

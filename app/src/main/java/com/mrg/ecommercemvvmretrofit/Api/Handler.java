@@ -1,5 +1,7 @@
 package com.mrg.ecommercemvvmretrofit.Api;
 
+import com.mrg.ecommercemvvmretrofit.Models.User;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -21,4 +23,7 @@ public class Handler {
     public Base getApi() {
         return base;
     }
+
+
+
 }

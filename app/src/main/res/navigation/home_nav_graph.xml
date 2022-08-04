@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav_graph"
-    app:startDestination="@id/dashBoardFragment">
+    app:startDestination="@id/signInFragment">
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.mrg.ecommercemvvmretrofit.Fragment.CartFragment"
@@ -18,6 +18,9 @@
         <argument
             android:name="getProduct"
             app:argType="com.mrg.ecommercemvvmretrofit.Models.Product" />
+        <action
+            android:id="@+id/action_cartFragment_to_finalFragment"
+            app:destination="@id/finalFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
@@ -27,6 +30,9 @@
         <action
             android:id="@+id/action_dashBoardFragment_to_productFragment"
             app:destination="@id/productFragment" />
+        <argument
+            android:name="getUserData"
+            app:argType="com.mrg.ecommercemvvmretrofit.Models.User" />
     </fragment>
     <fragment
         android:id="@+id/productFragment"
@@ -64,4 +70,51 @@
             android:name="getProduct"
             app:argType="com.mrg.ecommercemvvmretrofit.Models.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.mrg.ecommercemvvmretrofit.Fragment.FinalFragment"
+        android:label="fragment_final"
+        tools:layout="@layout/fragment_final" />
+    <action
+        android:id="@+id/action_global_productFragment"
+        app:destination="@id/productFragment" /><![CDATA[
+        app:startDestination="@id/signInFragment">
+        ]]>
+    <fragment
+            android:id="@+id/signInFragment"
+            android:name="com.mrg.ecommercemvvmretrofit.Fragment.SignInFragment"
+            android:label="fragment_sign_in"
+            tools:layout="@layout/fragment_sign_in">
+            <action
+                android:id="@+id/action_signInFragment_to_signUpFragment"
+                app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+        <fragment
+            android:id="@+id/signUpFragment"
+            android:name="com.mrg.ecommercemvvmretrofit.Fragment.SignUpFragment"
+            android:label="fragment_sign_up"
+            tools:layout="@layout/fragment_sign_up">
+            <action
+                android:id="@+id/action_signUpFragment_to_signInFragment"
+                app:destination="@id/signInFragment" />
+            <action
+                android:id="@+id/action_signUpFragment_to_home2"
+                app:destination="@id/home2" />
+        </fragment>
+        <action
+            android:id="@+id/action_global_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    <activity
+        android:id="@+id/home2"
+        android:name="com.mrg.ecommercemvvmretrofit.Ui.Home"
+        android:label="activity_home"
+        app:action="actio"
+        tools:layout="@layout/activity_home">
+        <argument
+            android:name="getUserData"
+            app:argType="com.mrg.ecommercemvvmretrofit.Models.User" />
+    </activity>
 </navigation>
