@@ -3,6 +3,7 @@ package com.mrg.ecommercemvvmretrofit;
 import android.widget.Toast;
 
 import com.mrg.ecommercemvvmretrofit.Api.Handler;
+import com.mrg.ecommercemvvmretrofit.Models.Category;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
 import com.mrg.ecommercemvvmretrofit.Models.User;
 
@@ -44,5 +45,12 @@ public class Repository {
         Call<List<Product>> call = Handler.getInstance().getApi().getProduct();
         return  call;
     }
-
+    public Call<List<Category>> getCategories(){
+        Call<List<Category>> call = Handler.getInstance().getApi().getCategories();
+        return call;
+    }
+    public Call<List<Product>> getProductsByCategory(int id){
+        Call<List<Product>> call = Handler.getInstance().getApi().getProductsByCategory(id);
+        return call;
+    }
 }

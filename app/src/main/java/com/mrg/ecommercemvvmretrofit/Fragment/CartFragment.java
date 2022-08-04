@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
@@ -20,7 +21,7 @@ import com.mrg.ecommercemvvmretrofit.databinding.FragmentCartBinding;
 import com.mrg.ecommercemvvmretrofit.databinding.FragmentProductBinding;
 
 public class CartFragment extends Fragment {
-    private Product data;
+    private Product data ;
     private ImageView productImage;
     private TextView productTittle;
     private TextView productPrice;
@@ -41,14 +42,19 @@ public class CartFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentCartBinding.inflate(inflater);
-        data = ProductPageFragmentArgs.fromBundle(getArguments()).getGetProduct();
         productImage =binding.imageView2;
         productTittle = binding.tittle;
         productPrice = binding.price;
         confirmBtn =binding.button;
         subtotal = binding.subtotal;
         total =binding.total;
-        setupViews();
+        if (ProductPageFragmentArgs.fromBundle(getArguments()).getGetProduct() != null){
+            data = ProductPageFragmentArgs.fromBundle(getArguments()).getGetProduct();
+            setupViews();
+        }else {
+            Toast.makeText(getActivity().getApplicationContext(),"Cart is empty",Toast.LENGTH_LONG).show();
+        }
+
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

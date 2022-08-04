@@ -1,5 +1,6 @@
 package com.mrg.ecommercemvvmretrofit.Api;
 
+import com.mrg.ecommercemvvmretrofit.Models.Category;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
 import com.mrg.ecommercemvvmretrofit.Models.User;
 
@@ -11,6 +12,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface Base {
@@ -23,6 +25,9 @@ public interface Base {
     Call<List<Product>> getProduct();
     @GET("auth/profile")
     Call<User> getUserData( @Header("Authorization") String token);
-
+    @GET("categories")
+    Call<List<Category>> getCategories();
+    @GET("categories/{id}/products")
+    Call<List<Product>> getProductsByCategory(@Path("id")int id);
 
 }

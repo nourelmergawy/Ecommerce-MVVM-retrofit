@@ -69,7 +69,7 @@ public class ProductPageFragment extends Fragment {
                 .into( productImage);
 
         productTittle.setText(data.getTitle());
-        productCategory.setText(data.getCategory().getCategory_name());
+        productCategory.setText(data.getCategory().getName());
         productPrice.setText(String.valueOf(data.getPrice()));
         productDescription.setText(data.getDescription());
     }

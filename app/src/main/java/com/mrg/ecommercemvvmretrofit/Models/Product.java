@@ -9,7 +9,7 @@ import java.util.List;
 public class Product implements Serializable {
     private int id;
     private String title;
-    private long price;
+    private Double price;
     private String description;
 
     public String[] getImages() {
@@ -20,7 +20,7 @@ public class Product implements Serializable {
         this.images = images;
     }
 
-    public Product(int id, String title, long price, String description, Category category, String[] images) {
+    public Product(int id, String title, Double price, String description, Category category, String[] images) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -37,7 +37,7 @@ public class Product implements Serializable {
     private String[] images;
 
 
-    public Product(int id, String title, int price, String description) {
+    public Product(int id, String title, Double price, String description) {
         this.id = id;
         this.title = title;
         this.price = price;
@@ -69,11 +69,11 @@ public class Product implements Serializable {
         this.title = title;
     }
 
-    public long getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

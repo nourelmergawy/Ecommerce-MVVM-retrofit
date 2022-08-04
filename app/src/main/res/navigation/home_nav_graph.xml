@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_productFragment_to_productPageFragment2"
             app:destination="@id/productPageFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_productPageByCategoryFragment"
+            app:destination="@id/productPageByCategoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/productPageFragment"
@@ -117,4 +120,16 @@
             android:name="getUserData"
             app:argType="com.mrg.ecommercemvvmretrofit.Models.User" />
     </activity>
+    <fragment
+        android:id="@+id/productPageByCategoryFragment"
+        android:name="com.mrg.ecommercemvvmretrofit.ProductPageByCategoryFragment"
+        android:label="fragment_product_page_by_category"
+        tools:layout="@layout/fragment_product_page_by_category" >
+        <action
+            android:id="@+id/action_productPageByCategoryFragment_to_productPageFragment"
+            app:destination="@id/productPageFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

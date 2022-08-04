@@ -1,39 +1,40 @@
 package com.mrg.ecommercemvvmretrofit.Models;
 
-public class Category {
+import java.io.Serializable;
 
-    private int category_id;
-    private String category_name;
-    private String category_img;
+public class Category implements Serializable {
 
-    public Category(int category_id, String category_name, String category_img) {
-        this.category_id = category_id;
-        this.category_name = category_name;
-        this.category_img = category_img;
+    private int id;
+    private String name;
+    private String image;
+
+    public Category(int id, String name, String image) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
     }
 
-    public int getCategory_id() {
-        return category_id;
+    public int getId() {
+        return id;
     }
 
-    public void setCategory_id(int category_id) {
-        this.category_id = category_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getCategory_name() {
-        return category_name;
+    public String getName() {
+        return name;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCategory_img() {
-        return category_img;
+    public String getImage() {
+        return image;
     }
 
-    public void setCategory_img(String category_img) {
-        this.category_img = category_img;
+    public void setImage(String image) {
+        this.image = image;
     }
-
 }
