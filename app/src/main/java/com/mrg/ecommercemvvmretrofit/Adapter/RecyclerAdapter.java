@@ -51,11 +51,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         holder.textView.setText(mylists.get(position).getTitle());
         holder.textView2.setText(mylists.get(position).getDescription());
-        Glide.with(activity)
-                .load(mylists.get(position).getImages()[0])
-//               .error(R.drawable.mainicon)
-                .placeholder(R.drawable.ic_launcher_background)
-                .into( holder.imageView);
+
+            Glide.with(activity)
+                    .load(mylists.get(position).getImages())
+                    .error(R.drawable.ic_launcher_background)
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .into( holder.imageView);
+
+
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

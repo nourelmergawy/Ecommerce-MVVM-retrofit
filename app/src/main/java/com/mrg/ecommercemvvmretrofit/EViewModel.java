@@ -19,6 +19,7 @@ import androidx.navigation.Navigation;
 import com.google.gson.JsonArray;
 import com.mrg.ecommercemvvmretrofit.Fragment.CartFragmentDirections;
 import com.mrg.ecommercemvvmretrofit.Fragment.SignInFragmentDirections;
+import com.mrg.ecommercemvvmretrofit.Fragment.SignUpFragmentDirections;
 import com.mrg.ecommercemvvmretrofit.Models.Category;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
 import com.mrg.ecommercemvvmretrofit.Models.User;
@@ -56,7 +57,7 @@ public class EViewModel extends ViewModel {
                 responseFromAPI =response.body();
                 Toast.makeText(context, "i'm done "+responseFromAPI.toString(), Toast.LENGTH_LONG).show();
                 NavDirections action =
-                        SignInFragmentDirections.actionGlobalDashBoardFragment(responseFromAPI);
+                        SignUpFragmentDirections.actionSignUpFragmentToHome2(responseFromAPI);
                 Navigation.findNavController(view).navigate(action);
 
 
