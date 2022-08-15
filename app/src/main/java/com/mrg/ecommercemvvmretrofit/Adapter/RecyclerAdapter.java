@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.mrg.ecommercemvvmretrofit.Models.Product;
 import com.mrg.ecommercemvvmretrofit.Fragment.ProductFragment;
-import com.mrg.ecommercemvvmretrofit.ProductPageByCategoryFragment;
+import com.mrg.ecommercemvvmretrofit.Fragment.ProductPageByCategoryFragment;
 import com.mrg.ecommercemvvmretrofit.R;
 
 import java.util.List;

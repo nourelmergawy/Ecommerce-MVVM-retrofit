@@ -8,15 +8,16 @@
     android:layout_marginLeft="4dp"
     android:layout_marginTop="16dp"
     app:cardCornerRadius="16dp"
+
     android:elevation="8dp"
-    android:padding="8dp"
     >
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#FBFDFD"
-        android:id="@+id/item_container">
+        android:id="@+id/item_container"
+        android:paddingBottom="8dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

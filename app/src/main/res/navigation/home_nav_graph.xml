@@ -125,7 +125,7 @@
     </activity>
     <fragment
         android:id="@+id/productPageByCategoryFragment"
-        android:name="com.mrg.ecommercemvvmretrofit.ProductPageByCategoryFragment"
+        android:name="com.mrg.ecommercemvvmretrofit.Fragment.ProductPageByCategoryFragment"
         android:label="fragment_product_page_by_category"
         tools:layout="@layout/fragment_product_page_by_category" >
         <action
